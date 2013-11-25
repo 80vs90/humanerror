@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+
+{% block main %}
+
+{% if tag_message %}
+<h2>All posts about: <em>{{tag_message}}</em></h2>
+{% endif %}
+
+{% for post in posts %}
+<div class="post">
+  <a href="{% url action="read" post=post.id  %}"><h1>{{ post.title }}</h1></a>
+  <h5>{{ post.readableDate }}</h5>
+  {{ post.body }}
+  <h6><em>Tags:</em></h6>
+  <div class="tags">
+  {% for tag in post.realTags %}
+  <a href="{% url action="read" tag=tag.id %}">{{tag.name}}</a> 
+  {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

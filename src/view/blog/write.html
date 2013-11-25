@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+
+{% block main %}
+
+<form action={% url action="post" %} method="post">
+  Title: <input type="text" name="title" size="50"><br><br>
+  Body:<br><textarea name="body" rows="20" cols="80"></textarea><br>
+  Tags: <input type="text" name="tags" size="80"><br><br>
+  <input type="submit" value="Save">
+</form>
+
+{% endblock %}

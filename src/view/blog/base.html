@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Human Error</title>
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.4/styles/default.min.css">
+    <script src="http://yandex.st/highlightjs/7.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      body {
+        background-color: #F8F8F8;
+        font-family: 'Share Tech', sans-serif;
+      }
+      #sidebar {
+        float: left;
+        width: 40%;
+        height: 100%;
+        position: fixed;
+      }
+      #main {
+        margin-left: 40%;
+        width: 60%;
+        padding: 20px;
+      }
+      .post {
+        padding: 5px;
+        margin: 5px;
+      }
+      h6 {
+        margin: 3px;
+      }
+      .tags {
+        font-size: 85%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sidebar">
+      <a href="/">
+        <img src="/static/sidebar.png" alt="Sidebar">
+      </a>  
+    </div>
+    <div id="main">
+      {% block main %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

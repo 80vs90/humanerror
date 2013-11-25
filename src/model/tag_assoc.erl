@@ -1,0 +1,2 @@
+-module(tag_assoc, [Id, Post, Tag]).
+-compile(export_all).
